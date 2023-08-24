@@ -1,13 +1,11 @@
 #include "monty.h"
-
 /**
-* execute - func  executes the opcode
-* @stack: head stack linked list here
-* @counter: line count here
-* @file: pointer to monty file stream
+* execute - executes the opcode
+* @stack: head linked list - stack
+* @counter: line_counter
+* @file: poiner to monty file
 * @content: line content
-*
-* Return: nothing
+* Return: no return
 */
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 {
@@ -18,11 +16,11 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 				{"add", f_add},
 				{"nop", f_nop},
 				{"sub", f_sub},
-				{"div", f_divide},
+				{"div", f_div},
 				{"mul", f_mul},
 				{"mod", f_mod},
-				{"pchar", f_printchar},
-				{"pstr", f_printstr},
+				{"pchar", f_pchar},
+				{"pstr", f_pstr},
 				{"rotl", f_rotl},
 				{"rotr", f_rotr},
 				{"queue", f_queue},
